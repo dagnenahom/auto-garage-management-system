@@ -2,8 +2,11 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:SmartGarageSystem"
-             StartupUri="MainWindow.xaml">
+             StartupUri="Views/LoginWindow.xaml">
     <Application.Resources>
-         
+        <BitmapImage x:Key="GarageLogo" UriSource="pack://application:,,,/Resources/Garage_Logo.png"/>
     </Application.Resources>
 </Application>
+
+    
+    
