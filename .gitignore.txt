@@ -25,6 +25,16 @@ bld/
 .vs/
 **/.vs/
 **/obj/
+
+auto-garage-management-system/SmartGarageSystem/.vs/
+auto-garage-management-system/SmartGarageSystem/SmartGarageSystem/bin/
+auto-garage-management-system/SmartGarageSystem/SmartGarageSystem/obj/
+
+SmartGarageSystem/.vs/
+aSmartGarageSystem/SmartGarageSystem/bin/
+SmartGarageSystem/SmartGarageSystem/obj/
+
+
 # Visual Studio Code
 .vscode/
 
