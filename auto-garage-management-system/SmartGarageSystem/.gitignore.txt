@@ -36,13 +36,12 @@ auto-garage-management-system/SmartGarageSystem/SmartGarageSystem/obj/
 SmartGarageSystem/.vs/
 SmartGarageSystem/SmartGarageSystem/bin/
 SmartGarageSystem/SmartGarageSystem/obj/
+SmartGarageSystem/bin/
+SmartGarageSystem/obj/
 
 */.vs/
 */SmartGarageSystem/bin/
 */SmartGarageSystem/obj/
-
-SmartGarageSystem/bin/
-SmartGarageSystem/obj/
 
 # Visual Studio Code
 .vscode/
