@@ -23,7 +23,8 @@ bld/
 
 # Visual Studio cache files
 .vs/
-
+**/.vs/
+**/obj/
 # Visual Studio Code
 .vscode/
 
