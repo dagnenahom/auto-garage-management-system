@@ -1,4 +1,5 @@
 ﻿
+using SmartGarageSystem.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace SmartGarageSystem.ViewModels
 {
@@ -47,8 +49,13 @@ namespace SmartGarageSystem.ViewModels
             var result = await _authService.AuthenticateAsync(Username, password);
             if (result.IsSuccess)
             {
-                MessageBox.Show("Login Success");
-                
+                // MessageBox.Show("Login Success");
+                // Open Shell window
+                var shell = new ShellWindow();
+                Application.Current.MainWindow = shell;
+                shell.Show();
+                // Close login window
+                Application.Current.Windows.OfType<LoginWindow>().FirstOrDefault()?.Close();
             }
             else
             {

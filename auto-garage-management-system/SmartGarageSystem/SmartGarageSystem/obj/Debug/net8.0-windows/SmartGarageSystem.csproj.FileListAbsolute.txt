@@ -13,12 +13,17 @@ C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-manageme
 C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
 C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\obj\Debug\net8.0-windows\SmartGarageSystem.csproj.AssemblyReference.cache
 C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\obj\Debug\net8.0-windows\Views\DashboardView.g.cs
 C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\obj\Debug\net8.0-windows\Views\LoginWindow.g.cs
+C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\obj\Debug\net8.0-windows\Views\ShellWindow.g.cs
 C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\obj\Debug\net8.0-windows\SmartGarageSystem_MarkupCompile.cache
 C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\obj\Debug\net8.0-windows\SmartGarageSystem_MarkupCompile.lref
+C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\obj\Debug\net8.0-windows\App.baml
 C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\obj\Debug\net8.0-windows\Views\DashboardView.baml
 C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\obj\Debug\net8.0-windows\Views\LoginWindow.baml
+C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\obj\Debug\net8.0-windows\Views\ShellWindow.baml
 C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\obj\Debug\net8.0-windows\SmartGarageSystem.g.resources
 C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\obj\Debug\net8.0-windows\SmartGarageSystem.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\obj\Debug\net8.0-windows\SmartGarageSystem.AssemblyInfoInputs.cache
@@ -31,4 +36,3 @@ C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-manageme
 C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\obj\Debug\net8.0-windows\SmartGarageSystem.pdb
 C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\obj\Debug\net8.0-windows\SmartGarageSystem.genruntimeconfig.cache
 C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\obj\Debug\net8.0-windows\ref\SmartGarageSystem.dll
-C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\obj\Debug\net8.0-windows\App.baml

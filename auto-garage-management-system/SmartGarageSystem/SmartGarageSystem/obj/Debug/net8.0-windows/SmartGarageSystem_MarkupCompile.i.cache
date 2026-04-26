@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\App.xaml
-21594365281
+4-1892093806
 
-141741300307
+191048917056
 206-1298785330
-MainWindow.xaml;Views\LoginWindow.xaml;
+MainWindow.xaml;Views\DashboardView.xaml;Views\LoginWindow.xaml;Views\ShellWindow.xaml;
 
 True
 

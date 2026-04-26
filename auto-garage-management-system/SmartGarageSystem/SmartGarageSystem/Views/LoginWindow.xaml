@@ -54,7 +54,7 @@
                     CommandParameter="{Binding ElementName=PasswordBox}" />
             <!-- Logo -->
             <!--Image Source="/Resources/Garage_Logo.png"  Width="120" Height="120"/-->
-            <Image Source="{StaticResource ResourceKey=GarageLogo}" Width="120" Height="120"/>
+            <!--<Image Source="{StaticResource ResourceKey=GarageLogo}" Width="120" Height="120"/>-->
 
         </StackPanel>
     </Border>
