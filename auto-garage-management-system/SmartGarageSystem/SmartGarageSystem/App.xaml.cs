@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using SmartGarageSystem.Services;
 using SmartGarageSystem.ViewModels;
 using SmartGarageSystem.Views;
@@ -6,6 +7,7 @@ using System.Configuration;
 using System.Data;
 using System.Windows;
 using System.Windows.Navigation;
+using Microsoft.Extensions.Configuration.Json;
 
 namespace SmartGarageSystem
 {
@@ -33,9 +35,23 @@ namespace SmartGarageSystem
 
         private void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IAuthenticationService, AuthenticationService>();
-            services.AddTransient<LoginViewModel>();
-        }
+        
+            // Configuration (read connection string from appsettings.json)
+            var configuration = new ConfigurationBuilder()
+                .SetBasePath(AppContext.BaseDirectory)
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .Build();
+            services.AddSingleton<IConfiguration>(configuration);
 
+            // Services
+            services.AddSingleton<IUserSession, UserSession>();
+            services.AddSingleton<IAuthenticationService, AuthenticationService>();
+            services.AddSingleton<INavigationService, Services.NavigationService>();
+
+            // ViewModels
+            services.AddTransient<LoginViewModel>();
+            services.AddTransient<ShellViewModel>();
+            services.AddTransient<DashboardViewModel>();
+        }
     }
 }

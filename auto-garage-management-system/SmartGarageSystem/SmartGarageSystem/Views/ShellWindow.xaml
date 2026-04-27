@@ -1,15 +1,11 @@
 ﻿<Window x:Class="SmartGarageSystem.Views.ShellWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="clr-namespace:SmartGarageSystem.ViewModels"
+        xmlns:vm="clr-namespace:SmartGarageSystem.ViewModels" 
+        xmlns:views="clr-namespace:SmartGarageSystem.Views"
         Title="Smart Garage System" Height="700" Width="1200"
         WindowStartupLocation="CenterScreen"
         WindowState="Maximized">
-
-    <Window.Resources>
-        <!-- Define DataTemplates to map ViewModels to Views -->
-
-    </Window.Resources>
 
     <Grid>
         <Grid.RowDefinitions>

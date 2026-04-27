@@ -1,4 +1,5 @@
 ﻿
+using SmartGarageSystem.Services;
 using SmartGarageSystem.Views;
 using System;
 using System.Collections.Generic;
@@ -13,49 +14,72 @@ namespace SmartGarageSystem.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
-        private readonly Services.IAuthenticationService _authService;
-        private string _username = string.Empty;
-        public LoginViewModel(Services.IAuthenticationService authService)
-        {
-            _authService = authService;
-            LoginCommand = new RelayCommand(ExecuteLogin, CanExecuteLogin);
-        }
-        public bool HasError => !string.IsNullOrEmpty(ErrorMessage);
+        private readonly IAuthenticationService _authService;
+        private readonly IUserSession _userSession;
+        private string _username;
+        private string _errorMessage;
 
         public string Username
         {
             get => _username;
-            set { _username = value ?? string.Empty; OnPropertyChanged(); LoginCommand.RaiseCanExecuteChanged(); }
+            set { _username = value; OnPropertyChanged(); LoginCommand.RaiseCanExecuteChanged(); }
         }
 
-        public string _errorMessage;
+
         public string ErrorMessage
         {
             get => _errorMessage;
             set { _errorMessage = value; OnPropertyChanged(); OnPropertyChanged(nameof(HasError)); }
+
+
         }
-        
+
+        public bool HasError => !string.IsNullOrEmpty(ErrorMessage);
+
+
+
         public RelayCommand LoginCommand { get; }
 
-        
+
+
+
+        public LoginViewModel(IAuthenticationService authService, IUserSession userSession)
+        {
+            _authService = authService;
+            _userSession = userSession;
+            LoginCommand = new RelayCommand(async param => await ExecuteLogin(param), CanExecuteLogin);
+        }
+
         private bool CanExecuteLogin(object parameter) =>
             !string.IsNullOrWhiteSpace(Username);
 
-        private async void ExecuteLogin(object parameter)
+        private async Task ExecuteLogin(object parameter)
         {
             var passwordBox = parameter as PasswordBox;
-            string password = passwordBox?.Password ?? string.Empty;
+            if (passwordBox == null) return;
 
-            var result = await _authService.AuthenticateAsync(Username, password);
+            string password = passwordBox.Password;
+            AuthenticationResult result = await _authService.AuthenticateAsync(Username, password);
+
             if (result.IsSuccess)
             {
-                // MessageBox.Show("Login Success");
+                // Store the logged‑in user globally
+                _userSession.SetUser(result.AuthenticatedUser);
+
                 // Open Shell window
                 var shell = new ShellWindow();
                 Application.Current.MainWindow = shell;
                 shell.Show();
+
                 // Close login window
-                Application.Current.Windows.OfType<LoginWindow>().FirstOrDefault()?.Close();
+                foreach (Window window in Application.Current.Windows)
+                {
+                    if (window is LoginWindow)
+                    {
+                        window.Close();
+                        break;
+                    }
+                }
             }
             else
             {

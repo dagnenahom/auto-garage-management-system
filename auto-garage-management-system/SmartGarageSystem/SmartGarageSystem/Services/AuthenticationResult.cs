@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmartGarageSystem.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,5 +11,6 @@ namespace SmartGarageSystem.Services
     {
         public bool IsSuccess { get; set; }
         public string ErrorMessage { get; set; }
+        public User AuthenticatedUser { get; set; }
     }
 }

@@ -11,9 +11,9 @@ false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\App.xaml
 4-1892093806
-
-17-308560402
-206-1298785330
+11413424753
+2099002672
+2161440806926
 MainWindow.xaml;Views\DashboardView.xaml;Views\LoginWindow.xaml;Views\ShellWindow.xaml;
 
 False
