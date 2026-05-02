@@ -1,0 +1,53 @@
+﻿
+<UserControl x:Class="SmartGarageSystem.Views.UserManagementView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SmartGarageSystem.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="900">
+
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Left panel: user list -->
+        <GroupBox Grid.Column="0" Header="Users" Margin="0,0,10,0">
+            <DockPanel>
+                <Button Content="Refresh" Command="{Binding RefreshCommand}" DockPanel.Dock="Top" Margin="0,0,0,5"/>
+                <ListBox ItemsSource="{Binding Users}" SelectedItem="{Binding SelectedUser}" DisplayMemberPath="FullName" />
+            </DockPanel>
+        </GroupBox>
+
+        <!-- Right panel: add/edit form -->
+        <GroupBox Grid.Column="1" Header="Edit User">
+            <StackPanel Margin="10">
+                <TextBlock Text="{Binding FormMessage}" Foreground="Red" Visibility="{Binding FormMessage, Converter={StaticResource BoolToVis}}" 
+                           TextWrapping="Wrap" Margin="0,0,0,10"/>
+                <TextBlock Text="Username"/>
+                <TextBox Text="{Binding EditUsername, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock Text="Full Name" Margin="0,10,0,0"/>
+                <TextBox Text="{Binding EditFullName, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock Text="Password (leave blank to keep)" Margin="0,10,0,0"/>
+                <PasswordBox x:Name="EditPasswordBox" />
+                <TextBlock Text="Roles" Margin="0,15,0,5"/>
+                <ItemsControl ItemsSource="{Binding AvailableRoles}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding IsSelected}" Content="{Binding Role.RoleName}" />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,15,0,0">
+                    <Button Content="New" Command="{Binding NewUserCommand}" Width="80" Margin="5,0"/>
+                    <Button Content="Save" Command="{Binding SaveUserCommand}" Width="80" Margin="5,0"/>
+                    <Button Content="Delete" Command="{Binding DeleteUserCommand}" Width="80" Margin="5,0"/>
+                    <Button Content="Cancel" Command="{Binding CancelEditCommand}" Width="80" Margin="5,0"/>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</UserControl>

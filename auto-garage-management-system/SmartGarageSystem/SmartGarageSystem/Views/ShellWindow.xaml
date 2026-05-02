@@ -1,12 +1,30 @@
 ﻿<Window x:Class="SmartGarageSystem.Views.ShellWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="clr-namespace:SmartGarageSystem.ViewModels" 
+        xmlns:vm="clr-namespace:SmartGarageSystem.ViewModels"
         xmlns:views="clr-namespace:SmartGarageSystem.Views"
-        Title="Smart Garage System" Height="700" Width="1200"
+        Title="Smart Garage Management System" Height="700" Width="1200"
         WindowStartupLocation="CenterScreen"
         WindowState="Maximized">
 
+    <!-- ============================================= -->
+    <!-- RESOURCES: Map ViewModels to their Views      -->
+    <!-- ============================================= -->
+    <Window.Resources>
+        <!--<DataTemplate DataType="{x:Type vm:DashboardViewModel}">
+            <views:DashboardView />
+        </DataTemplate>-->
+        <DataTemplate DataType="{x:Type vm:UserManagementViewModel}">
+            <views:UserManagementView />
+        </DataTemplate>
+        
+        
+        <!-- Add more templates here for other pages -->
+    </Window.Resources>
+
+    <!-- ============================================= -->
+    <!-- MAIN LAYOUT                                  -->
+    <!-- ============================================= -->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="80" />
@@ -17,15 +35,16 @@
         <Border Grid.Row="0" Background="#1E2A39" Padding="20,0">
             <Grid>
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                    <!--Image Source="/Resources/Garage_Logo.png" 
-                           Width="60" Height="60" Margin="0,0,15,0"/-->
-                    <TextBlock Text="Smart Garage System" 
+                    <!-- Logo -->
+                    <Image Source="pack://application:,,,/Resources/Garage_Logo.png" 
+                           Width="60" Height="60" Margin="0,0,15,0" Stretch="Uniform" />
+                    <TextBlock Text="Nahom Garage" 
                                FontSize="28" FontWeight="Bold" Foreground="White"
                                VerticalAlignment="Center"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" 
                             HorizontalAlignment="Right" VerticalAlignment="Center">
-                    <TextBlock Text="Welcome, Nahom Dagne" 
+                    <TextBlock Text="{Binding FullName}"  
                                Foreground="LightGray" VerticalAlignment="Center"
                                Margin="0,0,20,0"/>
                     <Button Content="Logout" Width="80" Height="35"
@@ -45,23 +64,24 @@
 
             <!-- Sidebar navigation -->
             <Border Grid.Column="0" Background="#2C3E50">
-                <StackPanel>
-                    <Button Content="  Dashboard" Style="{StaticResource NavButton}" 
-                            Command="{Binding NavigateCommand}" 
-                            CommandParameter="Dashboard"/>
+                <StackPanel Height="604" VerticalAlignment="Bottom">
+                    <!--<Button Content="  Dashboard" Style="{StaticResource NavButton}" 
+                            Command="{Binding NavigateCommand}" CommandParameter="Dashboard"
+                            Visibility="{Binding CanAccessUsers, Converter={StaticResource BoolToVis}}"/>-->
+                    <Button Content="  Users" Style="{StaticResource NavButton}"
+                            Command="{Binding NavigateCommand}" CommandParameter="Users"
+                            Visibility="{Binding CanAccessUsers, Converter={StaticResource BoolToVis}}"/>
+
+                    <!--<Button Content="  Vehicles" Style="{StaticResource NavButton}"
+                            Command="{Binding NavigateCommand}" CommandParameter="Vehicles"
+                            Visibility="{Binding CanAccessVehicles, Converter={StaticResource BoolToVis}}"/>
                     <Button Content="  Customers" Style="{StaticResource NavButton}"
-                            Command="{Binding NavigateCommand}" 
-                            CommandParameter="Customers"/>
-                    <Button Content="  Vehicles" Style="{StaticResource NavButton}"
-                            Command="{Binding NavigateCommand}" 
-                            CommandParameter="Vehicles"/>
-                    <Button Content="  Job Card" Style="{StaticResource NavButton}"
-                            Command="{Binding NavigateCommand}" 
-                            CommandParameter="Inventory"/>
-                    <Button Content="  Inventory" Style="{StaticResource NavButton}"
-                            Command="{Binding NavigateCommand}" 
-                            CommandParameter="Inventory"/>
-                    <!-- more buttons... -->
+                            Command="{Binding NavigateCommand}" CommandParameter="Customers"
+                            Visibility="{Binding CanAccessCustomers, Converter={StaticResource BoolToVis}}"/>
+                    <Button Content="  Services" Style="{StaticResource NavButton}"
+                            Command="{Binding NavigateCommand}" CommandParameter="Services"
+                            Visibility="{Binding CanAccessServices, Converter={StaticResource BoolToVis}}"/>-->
+                    <!-- Add more buttons as needed -->
                 </StackPanel>
             </Border>
 

@@ -24,7 +24,7 @@ namespace SmartGarageSystem.ViewModels
         public bool CanAccessVehicles => _userSession.IsInAnyRole("Admin", "Manager", "Mechanic");
         public bool CanAccessCustomers => _userSession.IsInAnyRole("Admin", "Manager");
         public bool CanAccessServices => _userSession.IsInAnyRole("Admin", "Mechanic", "ServiceManager");
-        public bool CanAccessUsers => _userSession.IsInRole("Admin");   // only Admins manage users
+        public bool CanAccessUsers =>  _userSession.IsInRole("Admin");   // only Admins manage users
         public bool CanAccessReports => _userSession.IsInAnyRole("Admin", "Manager");
 
         // ---- Navigation Commands (generic, used with CommandParameter) ----
@@ -40,6 +40,8 @@ namespace SmartGarageSystem.ViewModels
             _navigation.CurrentViewChanged += () => OnPropertyChanged(nameof(CurrentView));
 
             // ---- NavigateCommand ----
+
+
             NavigateCommand = new RelayCommand(param =>
             {
                 if (param is string viewName)
@@ -49,7 +51,13 @@ namespace SmartGarageSystem.ViewModels
                         case "Dashboard":
                             _navigation.NavigateTo<DashboardViewModel>();
                             break;
-                            // Add more cases as needed
+                        case "Users":
+                            //if (CanAccessUsers)  // only if allowed
+                                _navigation.NavigateTo<UserManagementViewModel>();
+                            break;
+                        default:
+                            break;
+
                     }
                 }
             });

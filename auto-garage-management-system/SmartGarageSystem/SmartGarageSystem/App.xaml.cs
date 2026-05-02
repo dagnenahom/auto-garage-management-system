@@ -45,6 +45,9 @@ namespace SmartGarageSystem
 
             // Services
             services.AddSingleton<IUserSession, UserSession>();
+
+            services.AddSingleton<IUserService, UserService>();
+
             services.AddSingleton<IAuthenticationService, AuthenticationService>();
             services.AddSingleton<INavigationService, Services.NavigationService>();
 
@@ -52,6 +55,8 @@ namespace SmartGarageSystem
             services.AddTransient<LoginViewModel>();
             services.AddTransient<ShellViewModel>();
             services.AddTransient<DashboardViewModel>();
+
+            services.AddTransient<UserManagementViewModel>();
         }
     }
 }
