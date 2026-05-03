@@ -14,11 +14,15 @@
         <!--<DataTemplate DataType="{x:Type vm:DashboardViewModel}">
             <views:DashboardView />
         </DataTemplate>-->
-        <DataTemplate DataType="{x:Type vm:UserManagementViewModel}">
+        <!--<DataTemplate DataType="{x:Type vm:UserManagementViewModel}">
             <views:UserManagementView />
         </DataTemplate>
-        
-        
+-->
+        <DataTemplate DataType="{x:Type vm:CustomerManagementViewModel}">
+            <views:CustomerManagementView />
+        </DataTemplate>
+
+
         <!-- Add more templates here for other pages -->
     </Window.Resources>
 
@@ -68,6 +72,9 @@
                     <!--<Button Content="  Dashboard" Style="{StaticResource NavButton}" 
                             Command="{Binding NavigateCommand}" CommandParameter="Dashboard"
                             Visibility="{Binding CanAccessUsers, Converter={StaticResource BoolToVis}}"/>-->
+                    <Button Content="  Customers" Style="{StaticResource NavButton}"
+                            Command="{Binding NavigateCommand}" CommandParameter="Customers"
+                            Visibility="{Binding CanAccessCustomers, Converter={StaticResource BoolToVis}}"/>
                     <Button Content="  Users" Style="{StaticResource NavButton}"
                             Command="{Binding NavigateCommand}" CommandParameter="Users"
                             Visibility="{Binding CanAccessUsers, Converter={StaticResource BoolToVis}}"/>
