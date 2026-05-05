@@ -3,8 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|c:\\users\\admin\\documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\smartgaragesystem\\smartgaragesystem\\views\\vehiclemanagementview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|solutionrelative:smartgaragesystem\\views\\vehiclemanagementview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|c:\\users\\admin\\documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\smartgaragesystem\\smartgaragesystem\\views\\customermanagementview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|solutionrelative:smartgaragesystem\\views\\customermanagementview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|c:\\users\\admin\\documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\smartgaragesystem\\smartgaragesystem\\services\\vehicleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|solutionrelative:smartgaragesystem\\services\\vehicleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|c:\\users\\admin\\documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\smartgaragesystem\\smartgaragesystem\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|solutionrelative:smartgaragesystem\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|c:\\users\\admin\\documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\smartgaragesystem\\smartgaragesystem\\views\\shellwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|solutionrelative:smartgaragesystem\\views\\shellwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|c:\\users\\admin\\documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\smartgaragesystem\\smartgaragesystem\\views\\shellwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|solutionrelative:smartgaragesystem\\views\\shellwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|c:\\users\\admin\\documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\smartgaragesystem\\smartgaragesystem\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|solutionrelative:smartgaragesystem\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|c:\\users\\admin\\documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\smartgaragesystem\\smartgaragesystem\\models\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|solutionrelative:smartgaragesystem\\models\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|c:\\users\\admin\\documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\smartgaragesystem\\smartgaragesystem\\views\\vehiclemanagementview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|solutionrelative:smartgaragesystem\\views\\vehiclemanagementview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|c:\\users\\admin\\documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\smartgaragesystem\\smartgaragesystem\\viewmodels\\shellviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|solutionrelative:smartgaragesystem\\viewmodels\\shellviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|c:\\users\\admin\\documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\smartgaragesystem\\smartgaragesystem\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|solutionrelative:smartgaragesystem\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,18 +54,146 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CustomerManagementView.xaml",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\Views\\CustomerManagementView.xaml",
               "RelativeDocumentMoniker": "SmartGarageSystem\\Views\\CustomerManagementView.xaml",
               "ToolTip": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\Views\\CustomerManagementView.xaml",
               "RelativeToolTip": "SmartGarageSystem\\Views\\CustomerManagementView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-03T15:38:16.402Z",
+              "WhenOpened": "2026-05-03T20:12:08.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VehicleService.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\Services\\VehicleService.cs",
+              "RelativeDocumentMoniker": "SmartGarageSystem\\Services\\VehicleService.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\Services\\VehicleService.cs",
+              "RelativeToolTip": "SmartGarageSystem\\Services\\VehicleService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwA8AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T20:01:53.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\App.xaml.cs",
+              "RelativeDocumentMoniker": "SmartGarageSystem\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\App.xaml.cs",
+              "RelativeToolTip": "SmartGarageSystem\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T19:51:00.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VehicleManagementView.xaml",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\Views\\VehicleManagementView.xaml",
+              "RelativeDocumentMoniker": "SmartGarageSystem\\Views\\VehicleManagementView.xaml",
+              "ToolTip": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\Views\\VehicleManagementView.xaml",
+              "RelativeToolTip": "SmartGarageSystem\\Views\\VehicleManagementView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-03T19:48:22.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ShellWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\Views\\ShellWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SmartGarageSystem\\Views\\ShellWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\Views\\ShellWindow.xaml.cs",
+              "RelativeToolTip": "SmartGarageSystem\\Views\\ShellWindow.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T19:58:28.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ShellWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\Views\\ShellWindow.xaml",
+              "RelativeDocumentMoniker": "SmartGarageSystem\\Views\\ShellWindow.xaml",
+              "ToolTip": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\Views\\ShellWindow.xaml",
+              "RelativeToolTip": "SmartGarageSystem\\Views\\ShellWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-03T19:45:24.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Vehicle.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\Models\\Vehicle.cs",
+              "RelativeDocumentMoniker": "SmartGarageSystem\\Models\\Vehicle.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\Models\\Vehicle.cs",
+              "RelativeToolTip": "SmartGarageSystem\\Models\\Vehicle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T19:59:02.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DashboardViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\ViewModels\\DashboardViewModel.cs",
+              "RelativeDocumentMoniker": "SmartGarageSystem\\ViewModels\\DashboardViewModel.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\ViewModels\\DashboardViewModel.cs",
+              "RelativeToolTip": "SmartGarageSystem\\ViewModels\\DashboardViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T20:10:16.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VehicleManagementView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\Views\\VehicleManagementView.xaml.cs",
+              "RelativeDocumentMoniker": "SmartGarageSystem\\Views\\VehicleManagementView.xaml.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\Views\\VehicleManagementView.xaml.cs",
+              "RelativeToolTip": "SmartGarageSystem\\Views\\VehicleManagementView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T20:01:13.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ShellViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\ViewModels\\ShellViewModel.cs",
+              "RelativeDocumentMoniker": "SmartGarageSystem\\ViewModels\\ShellViewModel.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\ViewModels\\ShellViewModel.cs",
+              "RelativeToolTip": "SmartGarageSystem\\ViewModels\\ShellViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T19:42:35.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "SmartGarageSystem\\ViewModels\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "SmartGarageSystem\\ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAFIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T19:44:15.746Z",
               "EditorCaption": ""
             }
           ]

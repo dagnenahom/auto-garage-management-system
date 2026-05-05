@@ -25,23 +25,16 @@ namespace SmartGarageSystem.ViewModels
             set { _username = value; OnPropertyChanged(); LoginCommand.RaiseCanExecuteChanged(); }
         }
 
-
         public string ErrorMessage
         {
             get => _errorMessage;
             set { _errorMessage = value; OnPropertyChanged(); OnPropertyChanged(nameof(HasError)); }
 
-
         }
 
         public bool HasError => !string.IsNullOrEmpty(ErrorMessage);
 
-
-
         public RelayCommand LoginCommand { get; }
-
-
-
 
         public LoginViewModel(IAuthenticationService authService, IUserSession userSession)
         {
@@ -66,10 +59,6 @@ namespace SmartGarageSystem.ViewModels
                 // Store the logged‑in user globally
                 _userSession.SetUser(result.AuthenticatedUser);
 
-                // Open Shell window
-                var shell = new ShellWindow();
-                Application.Current.MainWindow = shell;
-                shell.Show();
 
                 // Close login window
                 foreach (Window window in Application.Current.Windows)
@@ -80,6 +69,11 @@ namespace SmartGarageSystem.ViewModels
                         break;
                     }
                 }
+
+                // Open Shell window
+                var shell = new ShellWindow();
+                Application.Current.MainWindow = shell;
+                shell.Show();
             }
             else
             {

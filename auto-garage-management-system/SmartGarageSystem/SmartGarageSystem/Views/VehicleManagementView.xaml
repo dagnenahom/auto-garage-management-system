@@ -1,0 +1,94 @@
+﻿<UserControl x:Class="SmartGarageSystem.Views.VehicleManagementView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1000">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Search bar -->
+        <DockPanel Grid.Row="0" Margin="0,0,0,10">
+            <Button Content="Refresh" Command="{Binding RefreshCommand}" DockPanel.Dock="Right" Width="80" Margin="5,0,0,0"/>
+            <Button Content="Clear" Command="{Binding ClearSearchCommand}" DockPanel.Dock="Right" Width="60" Margin="5,0,0,0"/>
+            <Button Content="Search" Command="{Binding SearchCommand}" DockPanel.Dock="Right" Width="70"/>
+
+            <Label Content="Search:" DockPanel.Dock="Left" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <TextBox Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}" 
+                     Height="30" Width="685" VerticalContentAlignment="Stretch"/>
+
+        </DockPanel>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Vehicle list (multi‑column display) -->
+            <GroupBox Grid.Column="0" Header="Vehicles" Margin="0,0,10,0">
+                <ListBox ItemsSource="{Binding Vehicles}" SelectedItem="{Binding SelectedVehicle}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="3">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <TextBlock FontWeight="Bold" Text="{Binding LicensePlate}"/>
+                                <TextBlock Grid.Row="1" FontSize="12" Foreground="Gray"/>
+                                <!--Text="{Binding Make, StringFormat='{0} {1}'}"/>-->
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </GroupBox>
+
+            <!-- Edit form -->
+            <GroupBox Grid.Column="1" Header="Edit Vehicle">
+                <StackPanel Margin="10">
+                    <TextBlock Text="{Binding FormMessage}" Foreground="Red" 
+                               Visibility="{Binding FormMessage, Converter={StaticResource BoolToVis}}" 
+                               TextWrapping="Wrap" Margin="0,0,0,10"/>
+
+                    <TextBlock Text="Customer *"/>
+                    <ComboBox ItemsSource="{Binding CustomerList}" 
+                              SelectedItem="{Binding SelectedCustomer}" 
+                              DisplayMemberPath="FullName" Height="30"/>
+
+                    <TextBlock Text="License Plate *" Margin="0,10,0,0"/>
+                    <TextBox Text="{Binding EditLicensePlate, UpdateSourceTrigger=PropertyChanged}"/>
+
+                    <TextBlock Text="Make *" Margin="0,10,0,0"/>
+                    <TextBox Text="{Binding EditMake, UpdateSourceTrigger=PropertyChanged}"/>
+
+                    <TextBlock Text="Model *" Margin="0,10,0,0"/>
+                    <TextBox Text="{Binding EditModel, UpdateSourceTrigger=PropertyChanged}"/>
+
+                    <TextBlock Text="Year" Margin="0,10,0,0"/>
+                    <TextBox Text="{Binding EditYear, UpdateSourceTrigger=PropertyChanged}"/>
+
+                    <TextBlock Text="Color" Margin="0,10,0,0"/>
+                    <TextBox Text="{Binding EditColor, UpdateSourceTrigger=PropertyChanged}"/>
+
+                    <TextBlock Text="VIN" Margin="0,10,0,0"/>
+                    <TextBox Text="{Binding EditVIN, UpdateSourceTrigger=PropertyChanged}"/>
+
+                    
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,15,0,0">
+                        <Button Content="New" Command="{Binding NewVehicleCommand}" Width="70" Margin="5,0"/>
+                        <Button Content="Save" Command="{Binding SaveVehicleCommand}" Width="70" Margin="5,0"/>
+                        <Button Content="Delete" Command="{Binding DeleteVehicleCommand}" Width="70" Margin="5,0"/>
+                        <Button Content="Cancel" Command="{Binding CancelEditCommand}" Width="70" Margin="5,0"/>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+    </Grid>
+</UserControl>

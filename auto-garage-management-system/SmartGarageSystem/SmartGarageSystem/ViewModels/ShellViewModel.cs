@@ -55,6 +55,10 @@ namespace SmartGarageSystem.ViewModels
                             //if (CanAccessUsers)  // only if allowed
                             _navigation.NavigateTo<CustomerManagementViewModel>();
                             break;
+                        case "Vehicles":
+                            //if (CanAccessUsers)  // only if allowed
+                            _navigation.NavigateTo<VehiclesViewModel>();
+                            break;
                         case "Users":
                             //if (CanAccessUsers)  // only if allowed
                                 _navigation.NavigateTo<UserManagementViewModel>();
