@@ -22,6 +22,7 @@ namespace SmartGarageSystem.ViewModels
         // You can freely add new roles (like "InventoryManager") in the DB and add checks here.
         public bool CanAccessDashboard => true;                // everyone
         public bool CanAccessVehicles => _userSession.IsInAnyRole("Admin", "Manager", "Mechanic");
+        public bool CanAccessInventory => _userSession.IsInAnyRole("Admin", "Manager", "Mechanic");
         public bool CanAccessCustomers => _userSession.IsInAnyRole("Admin", "Manager");
         public bool CanAccessServices => _userSession.IsInAnyRole("Admin", "Mechanic", "ServiceManager");
         public bool CanAccessUsers =>  _userSession.IsInRole("Admin");   // only Admins manage users
@@ -33,6 +34,7 @@ namespace SmartGarageSystem.ViewModels
 
         public ShellViewModel(INavigationService navigation, IUserSession userSession)
         {
+            
             _navigation = navigation;
             _userSession = userSession;
 
@@ -58,6 +60,10 @@ namespace SmartGarageSystem.ViewModels
                         case "Vehicles":
                             //if (CanAccessUsers)  // only if allowed
                             _navigation.NavigateTo<VehiclesViewModel>();
+                            break;
+                        case "Inventory":
+                            //if (CanAccessUsers)  // only if allowed
+                            _navigation.NavigateTo<InventoryViewModel>();
                             break;
                         case "Users":
                             //if (CanAccessUsers)  // only if allowed

@@ -17,12 +17,14 @@
         <DataTemplate DataType="{x:Type vm:UserManagementViewModel}">
             <views:UserManagementView />
         </DataTemplate>
-
         <DataTemplate DataType="{x:Type vm:CustomerManagementViewModel}">
             <views:CustomerManagementView />
         </DataTemplate>
         <DataTemplate DataType="{x:Type vm:VehiclesViewModel}">
             <views:VehicleManagementView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:InventoryViewModel}">
+            <views:InventoryView />
         </DataTemplate>
 
         <!-- Add more templates here for other pages -->
@@ -80,19 +82,14 @@
                     <Button Content="  Vehicles" Style="{StaticResource NavButton}"
                             Command="{Binding NavigateCommand}" CommandParameter="Vehicles"
                             Visibility="{Binding CanAccessVehicles, Converter={StaticResource BoolToVis}}"/>
+                    <Button Content="  Inventory" Style="{StaticResource NavButton}"
+                            Command="{Binding NavigateCommand}" CommandParameter="Inventory"
+                            Visibility="{Binding CanAccessInventory, Converter={StaticResource BoolToVis}}"/>
                     <Button Content="  Users" Style="{StaticResource NavButton}"
                             Command="{Binding NavigateCommand}" CommandParameter="Users"
                             Visibility="{Binding CanAccessUsers, Converter={StaticResource BoolToVis}}"/>
+                    
 
-                    <!--<Button Content="  Vehicles" Style="{StaticResource NavButton}"
-                            Command="{Binding NavigateCommand}" CommandParameter="Vehicles"
-                            Visibility="{Binding CanAccessVehicles, Converter={StaticResource BoolToVis}}"/>
-                    <Button Content="  Customers" Style="{StaticResource NavButton}"
-                            Command="{Binding NavigateCommand}" CommandParameter="Customers"
-                            Visibility="{Binding CanAccessCustomers, Converter={StaticResource BoolToVis}}"/>
-                    <Button Content="  Services" Style="{StaticResource NavButton}"
-                            Command="{Binding NavigateCommand}" CommandParameter="Services"
-                            Visibility="{Binding CanAccessServices, Converter={StaticResource BoolToVis}}"/>-->
                     <!-- Add more buttons as needed -->
                 </StackPanel>
             </Border>

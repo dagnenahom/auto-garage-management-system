@@ -70,6 +70,8 @@ namespace SmartGarageSystem.ViewModels
                     }
                 }
 
+                
+
                 // Open Shell window
                 var shell = new ShellWindow();
                 Application.Current.MainWindow = shell;

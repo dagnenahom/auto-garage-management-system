@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="SmartGarageSystem.Views.InventoryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SmartGarageSystem.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="900">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Search Bar -->
+        <DockPanel Grid.Row="0" Margin="0,0,0,10">
+            <Button Content="Refresh" Command="{Binding RefreshCommand}" DockPanel.Dock="Right" Width="80" Margin="5,0,0,0"/>
+            <Button Content="Clear" Command="{Binding ClearSearchCommand}" DockPanel.Dock="Right" Width="60" Margin="5,0,0,0"/>
+            <Button Content="Search" Command="{Binding SearchCommand}" DockPanel.Dock="Right" Width="70"/>
+            <Label Content="Search:" DockPanel.Dock="Left" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <TextBox Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"  Height="30" Width="685" VerticalContentAlignment="Stretch"/>
+            
+        </DockPanel>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Items List -->
+            <GroupBox Grid.Column="0" Header="Inventory Items">
+                <ListBox ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="3">
+                                <TextBlock FontWeight="Bold" Text="{Binding PartName}"/>
+                                <TextBlock FontSize="12" Foreground="Gray">
+                                    <Run Text="Qty: "/><Run Text="{Binding QuantityInStock}"/>
+                                    <Run Text="  Price: "/><Run Text="{Binding UnitPrice, StringFormat=C}"/>
+                                </TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </GroupBox>
+
+            <!-- Edit Form -->
+            <GroupBox Grid.Column="1" Header="Edit Item">
+                <StackPanel Margin="10">
+                    <TextBlock Text="{Binding FormMessage}" Foreground="Red" Visibility="{Binding FormMessage, Converter={StaticResource BoolToVis}}"/>
+                    <TextBlock Text="Part Name *"/>
+                    <TextBox Text="{Binding EditPartName, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBlock Text="Part Number (SKU)" Margin="0,10,0,0"/>
+                    <TextBox Text="{Binding EditPartNumber}"/>
+                    <TextBlock Text="Description" Margin="0,10,0,0"/>
+                    <TextBox Text="{Binding EditDescription}"/>
+                    <Grid Margin="0,10,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Margin="0,0,5,0">
+                            <TextBlock Text="Qty in Stock *"/>
+                            <TextBox Text="{Binding EditQuantity, UpdateSourceTrigger=PropertyChanged}"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Margin="5,0,0,0">
+                            <TextBlock Text="Unit Price *"/>
+                            <TextBox Text="{Binding EditUnitPrice, UpdateSourceTrigger=PropertyChanged}"/>
+                        </StackPanel>
+                    </Grid>
+                    <TextBlock Text="Reorder Level" Margin="0,10,0,0"/>
+                    <TextBox Text="{Binding EditReorderLevel}"/>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,15,0,0">
+                        <Button Content="New" Command="{Binding NewItemCommand}" Width="70" Margin="5,0"/>
+                        <Button Content="Save" Command="{Binding SaveItemCommand}" Width="70" Margin="5,0"/>
+                        <Button Content="Delete" Command="{Binding DeleteItemCommand}" Width="70" Margin="5,0"/>
+                        <Button Content="Cancel" Command="{Binding CancelEditCommand}" Width="70" Margin="5,0"/>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+    </Grid>
+</UserControl>
