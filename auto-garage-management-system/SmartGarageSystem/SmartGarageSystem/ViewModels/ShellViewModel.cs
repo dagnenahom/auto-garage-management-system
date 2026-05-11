@@ -24,7 +24,7 @@ namespace SmartGarageSystem.ViewModels
         public bool CanAccessVehicles => _userSession.IsInAnyRole("Admin", "Manager", "Mechanic");
         public bool CanAccessInventory => _userSession.IsInAnyRole("Admin", "Manager", "Mechanic");
         public bool CanAccessCustomers => _userSession.IsInAnyRole("Admin", "Manager");
-        public bool CanAccessServices => _userSession.IsInAnyRole("Admin", "Mechanic", "ServiceManager");
+        public bool CanAccessJobCards => _userSession.IsInAnyRole("Admin", "Manager", "Mechanic");
         public bool CanAccessUsers =>  _userSession.IsInRole("Admin");   // only Admins manage users
         public bool CanAccessReports => _userSession.IsInAnyRole("Admin", "Manager");
 
@@ -64,6 +64,10 @@ namespace SmartGarageSystem.ViewModels
                         case "Inventory":
                             //if (CanAccessUsers)  // only if allowed
                             _navigation.NavigateTo<InventoryViewModel>();
+                            break;
+                        case "JobCards":
+                            //if (CanAccessUsers)  // only if allowed
+                            _navigation.NavigateTo<JobCardViewModel>();
                             break;
                         case "Users":
                             //if (CanAccessUsers)  // only if allowed

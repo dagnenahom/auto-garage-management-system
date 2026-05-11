@@ -13,6 +13,72 @@ using System.Threading.Tasks;
 
 namespace SmartGarageSystem.Services
 {
+    public class AuthenticationService : IAuthenticationService
+    {
+        private readonly IUserRepository _userRepo;
+        private readonly IPasswordHasher _hasher;
+
+        public AuthenticationService(IUserRepository userRepo, IPasswordHasher hasher)
+        {
+            _userRepo = userRepo;
+            _hasher = hasher;
+        }
+
+        public async Task<AuthenticationResult> AuthenticateAsync(string username, string password)
+        {
+            var result = new AuthenticationResult();
+
+            // Branch 1: null or whitespace inputs
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+            {
+                result.ErrorMessage = "Username and password are required.";
+                return result;
+            }
+
+            try
+            {
+                var user = await _userRepo.GetUserByUsernameAsync(username);
+
+                // Branch 2: user not found
+                if (user == null)
+                {
+                    result.ErrorMessage = "Invalid username or password.";
+                    return result;
+                }
+
+                // Branch 3: password mismatch
+                if (!_hasher.VerifyPassword(password, user.PasswordHash))
+                {
+                    result.ErrorMessage = "Invalid username or password.";
+                    return result;
+                }
+
+                // Branch 4: success
+                result.IsSuccess = true;
+                result.AuthenticatedUser = user;
+            }
+            catch (Exception ex)
+            {
+                // Branch 5: unexpected error
+                result.ErrorMessage = "Login error: " + ex.Message;
+            }
+
+            return result;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
     /* this was used first for testing purpose
      * public class AuthenticationService : IAuthenticationService
     {
@@ -36,7 +102,7 @@ namespace SmartGarageSystem.Services
 
         
     }*/
-
+    /*
     public class AuthenticationService : IAuthenticationService
     {
         private readonly string _connectionString;
@@ -118,7 +184,7 @@ namespace SmartGarageSystem.Services
 
             return result;
         }
-    }
+    }*/
 }
 
 

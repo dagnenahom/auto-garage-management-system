@@ -1,0 +1,127 @@
+﻿<UserControl x:Class="SmartGarageSystem.Views.JobCardView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmartGarageSystem.Views">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Top bar: Refresh button -->
+        <DockPanel Grid.Row="0" Margin="0,0,0,10">
+            <Button Content="Refresh" Command="{Binding RefreshCommand}" DockPanel.Dock="Right" Width="80" Margin="5,0,0,0"/>
+            <Button Content="Reload Lists" Command="{Binding LoadDropdownsCommand}" DockPanel.Dock="Right" Width="100" Margin="5,0,0,0"/>
+        </DockPanel>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Left: Job Card List -->
+            <GroupBox Grid.Column="0" Header="Job Cards" Margin="0,0,10,0">
+                <ListBox ItemsSource="{Binding JobCards}" SelectedItem="{Binding SelectedJobCard}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="3">
+                                <TextBlock FontWeight="Bold" Text="{Binding VehiclePlate}"/>
+                                <TextBlock FontSize="12" Foreground="Gray">
+                                    <Run Text="{Binding CustomerName}"/><Run Text=" – "/><Run Text="{Binding Status}"/>
+                                </TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </GroupBox>
+
+            <!-- Right: Detail & Items -->
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Header form -->
+                <GroupBox Grid.Row="0" Header="Job Details" Margin="0,0,0,10">
+                    <StackPanel Margin="10">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0" Margin="0,0,5,0">
+                                <TextBlock Text="Vehicle *"/>
+                                <ComboBox ItemsSource="{Binding VehicleList}" SelectedItem="{Binding SelectedVehicle}"
+                                          DisplayMemberPath="LicensePlate" Height="30"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Margin="5,0,0,0">
+                                <TextBlock Text="Mechanic *"/>
+                                <ComboBox ItemsSource="{Binding MechanicList}" SelectedItem="{Binding SelectedMechanic}"
+                                          DisplayMemberPath="FullName" Height="30"/>
+                            </StackPanel>
+                        </Grid>
+                        <TextBlock Text="Status" Margin="0,10,0,0"/>
+                        <ComboBox ItemsSource="{Binding StatusList}" SelectedItem="{Binding SelectedStatus}" Height="30"/>
+                        <TextBlock Text="Description" Margin="0,10,0,0"/>
+                        <TextBox Text="{Binding EditDescription}" Height="60" TextWrapping="Wrap"/>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+                            <Button Content="New" Command="{Binding NewJobCardCommand}" Width="70" Margin="5"/>
+                            <Button Content="Save" Command="{Binding SaveJobCardCommand}" Width="70" Margin="5"/>
+                            <Button Content="Delete" Command="{Binding DeleteJobCardCommand}" Width="70" Margin="5"/>
+                        </StackPanel>
+                    </StackPanel>
+                </GroupBox>
+
+                <!-- Items list -->
+                <GroupBox Grid.Row="1" Header="Parts Used" Margin="0,0,0,10">
+                    <ListBox ItemsSource="{Binding CurrentItems}" Height="100">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding PartName}"/>
+                                        <TextBlock FontSize="12" Foreground="Gray">
+                                            <Run Text="Qty: "/><Run Text="{Binding Quantity}"/>
+                                            <Run Text="  @ "/><Run Text="{Binding UnitPrice, StringFormat=C}"/>
+                                            <Run Text=" = "/><Run Text="{Binding LineTotal, Mode=OneWay, StringFormat=C}"/>
+                                        </TextBlock>
+                                    </StackPanel>
+                                    <Button Grid.Column="1" Content="X" Width="30" Height="20"
+                                            Command="{Binding DataContext.RemoveItemCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                            CommandParameter="{Binding}"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </GroupBox>
+
+                <!-- Add item panel -->
+                <GroupBox Grid.Row="2" Header="Add Part">
+                    <StackPanel Margin="10">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="60"/>
+                            </Grid.ColumnDefinitions>
+                            <ComboBox ItemsSource="{Binding InventoryList}" SelectedItem="{Binding SelectedInventoryItem}"
+                                      DisplayMemberPath="PartName" Height="30" Margin="0,0,5,0"/>
+                            <TextBox Grid.Column="1" Text="{Binding AddQuantity, UpdateSourceTrigger=PropertyChanged}" Height="30"/>
+                        </Grid>
+                        <Button Content="Add to Job Card" Command="{Binding AddItemCommand}" Width="120" HorizontalAlignment="Right" Margin="0,5,0,0"/>
+                        <TextBlock Text="{Binding FormMessage}" Foreground="Red" Margin="0,5,0,0"/>
+                    </StackPanel>
+                </GroupBox>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

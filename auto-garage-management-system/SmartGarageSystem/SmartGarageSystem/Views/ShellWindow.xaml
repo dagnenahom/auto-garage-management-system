@@ -26,6 +26,9 @@
         <DataTemplate DataType="{x:Type vm:InventoryViewModel}">
             <views:InventoryView />
         </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:JobCardViewModel}">
+            <views:JobCardView />
+        </DataTemplate>
 
         <!-- Add more templates here for other pages -->
     </Window.Resources>
@@ -85,6 +88,9 @@
                     <Button Content="  Inventory" Style="{StaticResource NavButton}"
                             Command="{Binding NavigateCommand}" CommandParameter="Inventory"
                             Visibility="{Binding CanAccessInventory, Converter={StaticResource BoolToVis}}"/>
+                    <Button Content="  Job Cards" Style="{StaticResource NavButton}"
+                            Command="{Binding NavigateCommand}" CommandParameter="JobCards"
+                            Visibility="{Binding CanAccessJobCards, Converter={StaticResource BoolToVis}}"/>               
                     <Button Content="  Users" Style="{StaticResource NavButton}"
                             Command="{Binding NavigateCommand}" CommandParameter="Users"
                             Visibility="{Binding CanAccessUsers, Converter={StaticResource BoolToVis}}"/>
