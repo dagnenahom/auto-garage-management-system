@@ -55,7 +55,7 @@ namespace SmartGarageSystem
             services.AddSingleton<INavigationService, Services.NavigationService>();
 
             services.AddSingleton<IUserRepository, SqlUserRepository>();
-            //services.AddSingleton<IPasswordHasher, PasswordHasher>();
+            services.AddSingleton<IPasswordHasher, PasswordHasher>();
 
             // ViewModels
             services.AddTransient<ShellViewModel>();
