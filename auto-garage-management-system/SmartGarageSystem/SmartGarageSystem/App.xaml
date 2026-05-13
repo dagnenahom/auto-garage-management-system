@@ -8,10 +8,34 @@
     <Application.Resources>
         <!--<BitmapImage x:Key="GarageLogo" UriSource="pack://application:,,,/Resources/Garage_Logo.png"/>-->
 
-        
+        <DropShadowEffect x:Key="CardShadow" BlurRadius="10" ShadowDepth="2" Opacity="0.15"/>
         <!-- Built‑in converter: true → Visible, false → Collapsed -->
         <BooleanToVisibilityConverter x:Key="BoolToVis" />
-
+        <Style x:Key="ToggleNavButton" TargetType="ToggleButton">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Height" Value="50" />
+            <Setter Property="Margin" Value="0,2" />
+            <Setter Property="HorizontalContentAlignment" Value="Left" />
+            <Setter Property="Padding" Value="20,0" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ToggleButton">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Left" 
+                                      VerticalAlignment="Center"
+                                      Margin="{TemplateBinding Padding}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#34495E" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
         <!-- Sidebar button style -->
         <Style x:Key="NavButton" TargetType="Button">
             <Setter Property="Background" Value="Transparent" />

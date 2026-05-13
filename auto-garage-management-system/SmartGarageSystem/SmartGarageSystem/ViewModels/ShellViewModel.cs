@@ -32,6 +32,19 @@ namespace SmartGarageSystem.ViewModels
         public ICommand NavigateCommand { get; }
         public ICommand LogoutCommand { get; }
 
+        private bool _isReportsExpanded;
+        public bool IsReportsExpanded
+        {
+            get => _isReportsExpanded;
+            set { _isReportsExpanded = value; OnPropertyChanged(); }
+        }
+
+        // Toggle command
+        public ICommand ToggleReportsCommand { get; }
+
+        // Navigation to stock report
+        private void NavigateToStockReport() => _navigation.NavigateTo<StockReportViewModel>();
+
         public ShellViewModel(INavigationService navigation, IUserSession userSession)
         {
             
@@ -54,24 +67,27 @@ namespace SmartGarageSystem.ViewModels
                             _navigation.NavigateTo<DashboardViewModel>();
                             break;
                         case "Customers":
-                            //if (CanAccessUsers)  // only if allowed
+                            //if (CanAccessCustomers)  // only if allowed
                             _navigation.NavigateTo<CustomerManagementViewModel>();
                             break;
                         case "Vehicles":
-                            //if (CanAccessUsers)  // only if allowed
+                            //if (CanAccessVehicles)  // only if allowed
                             _navigation.NavigateTo<VehiclesViewModel>();
                             break;
                         case "Inventory":
-                            //if (CanAccessUsers)  // only if allowed
+                            //if (CanAccessInventory)  // only if allowed
                             _navigation.NavigateTo<InventoryViewModel>();
                             break;
                         case "JobCards":
-                            //if (CanAccessUsers)  // only if allowed
+                            //if (CanAccessJobCards)  // only if allowed
                             _navigation.NavigateTo<JobCardViewModel>();
                             break;
                         case "Users":
                             //if (CanAccessUsers)  // only if allowed
                                 _navigation.NavigateTo<UserManagementViewModel>();
+                            break;                      
+                        case "StockReport":
+                            NavigateToStockReport();
                             break;
                         default:
                             break;

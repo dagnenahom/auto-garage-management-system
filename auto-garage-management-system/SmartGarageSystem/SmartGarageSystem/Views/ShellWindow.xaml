@@ -29,7 +29,9 @@
         <DataTemplate DataType="{x:Type vm:JobCardViewModel}">
             <views:JobCardView />
         </DataTemplate>
-
+        <DataTemplate DataType="{x:Type vm:StockReportViewModel}">
+            <views:StockReportView />
+        </DataTemplate>
         <!-- Add more templates here for other pages -->
     </Window.Resources>
 
@@ -90,11 +92,24 @@
                             Visibility="{Binding CanAccessInventory, Converter={StaticResource BoolToVis}}"/>
                     <Button Content="  Job Cards" Style="{StaticResource NavButton}"
                             Command="{Binding NavigateCommand}" CommandParameter="JobCards"
-                            Visibility="{Binding CanAccessJobCards, Converter={StaticResource BoolToVis}}"/>               
+                            Visibility="{Binding CanAccessJobCards, Converter={StaticResource BoolToVis}}"/>
                     <Button Content="  Users" Style="{StaticResource NavButton}"
                             Command="{Binding NavigateCommand}" CommandParameter="Users"
                             Visibility="{Binding CanAccessUsers, Converter={StaticResource BoolToVis}}"/>
+                    <!-- Reports expandable section -->
                     
+                    <ToggleButton Content="📊 Reports" Style="{StaticResource ToggleNavButton}"
+                                IsChecked="{Binding IsReportsExpanded}"
+                                Command="{Binding ToggleReportsCommand}"
+                                Visibility="{Binding CanAccessReports, Converter={StaticResource BoolToVis}}"/>   
+
+                    <StackPanel Visibility="{Binding IsReportsExpanded, Converter={StaticResource BoolToVis}}">
+                        <Button Content="    📦 Stock Report" Style="{StaticResource NavButton}"
+                                Command="{Binding NavigateCommand}" CommandParameter="StockReport"
+                                Padding="35,0,0,0" FontSize="14"/>
+
+                    </StackPanel>
+
 
                     <!-- Add more buttons as needed -->
                 </StackPanel>

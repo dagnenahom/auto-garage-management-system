@@ -72,3 +72,5 @@ C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-manageme
 C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\bin\Debug\net8.0-windows\xunit.assert.dll
 C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\bin\Debug\net8.0-windows\xunit.core.dll
 C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\bin\Debug\net8.0-windows\xunit.execution.dotnet.dll
+C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\obj\Debug\net8.0-windows\Views\StockReportView.g.cs
+C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-management-system\SmartGarageSystem\SmartGarageSystem\obj\Debug\net8.0-windows\Views\StockReportView.baml
