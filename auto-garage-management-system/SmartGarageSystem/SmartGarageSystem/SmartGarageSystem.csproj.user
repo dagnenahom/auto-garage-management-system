@@ -20,6 +20,9 @@
     <Compile Update="Views\ShellWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\StockBalanceReportView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\StockReportView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

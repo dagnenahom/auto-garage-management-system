@@ -1,5 +1,6 @@
 ﻿using SmartGarageSystem.Models;
 using SmartGarageSystem.Services;
+using SmartGarageSystem.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,5 +33,21 @@ namespace SmartGarageSystem.Services
 
             return report;
         }
-    }
+        public async Task<StockBalanceReport> GetStockBalanceReportAsync()
+        {
+            var items = await _inventoryService.GetAllItemsAsync();
+            return new StockBalanceReport
+            {
+                Items = items.Select(i => new StockBalanceItem
+                {
+                    InventoryItemId = i.InventoryItemId,
+                    PartName = i.PartName,
+                    PartNumber = i.PartNumber,
+                    QuantityInStock = i.QuantityInStock,
+                    UnitPrice = i.UnitPrice
+                }).ToList()
+            };
+        }
+    }  
+
 }

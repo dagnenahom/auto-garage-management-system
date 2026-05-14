@@ -1,4 +1,5 @@
 ﻿using SmartGarageSystem.Models;
+using SmartGarageSystem.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,6 @@ namespace SmartGarageSystem.Services
     public interface IReportService
     {
         Task<StockReport> GetStockReportAsync();
+        Task<StockBalanceReport> GetStockBalanceReportAsync();
     }
 }

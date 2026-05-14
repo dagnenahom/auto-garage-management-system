@@ -69,6 +69,7 @@ namespace SmartGarageSystem
             services.AddTransient<InventoryViewModel>();
             services.AddTransient<JobCardViewModel>();
             services.AddTransient<StockReportViewModel>();
+            services.AddTransient<StockBalanceReportViewModel>();
         }
     }
 }

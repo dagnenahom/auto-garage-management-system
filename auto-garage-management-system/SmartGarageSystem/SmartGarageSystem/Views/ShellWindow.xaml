@@ -32,7 +32,9 @@
         <DataTemplate DataType="{x:Type vm:StockReportViewModel}">
             <views:StockReportView />
         </DataTemplate>
-        <!-- Add more templates here for other pages -->
+        <DataTemplate DataType="{x:Type vm:StockBalanceReportViewModel}">
+            <views:StockBalanceReportView />
+        </DataTemplate>
     </Window.Resources>
 
     <!-- ============================================= -->
@@ -104,10 +106,12 @@
                                 Visibility="{Binding CanAccessReports, Converter={StaticResource BoolToVis}}"/>   
 
                     <StackPanel Visibility="{Binding IsReportsExpanded, Converter={StaticResource BoolToVis}}">
-                        <Button Content="    📦 Stock Report" Style="{StaticResource NavButton}"
+                        <Button Content="    📦 Low Stock Report" Style="{StaticResource NavButton}"
                                 Command="{Binding NavigateCommand}" CommandParameter="StockReport"
                                 Padding="35,0,0,0" FontSize="14"/>
-
+                        <Button Content="    📋 Stock Balance Report" Style="{StaticResource NavButton}"
+                                Command="{Binding NavigateCommand}" CommandParameter="StockBalanceReport"
+                                Padding="35,0,0,0" FontSize="14"/>
                     </StackPanel>
 
 

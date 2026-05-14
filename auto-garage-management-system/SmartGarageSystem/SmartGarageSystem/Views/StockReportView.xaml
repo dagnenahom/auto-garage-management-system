@@ -9,12 +9,11 @@
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <StackPanel Margin="20">
             <Grid Margin="0,0,0,15">
-                <TextBlock Text="Stock Report" FontSize="28" FontWeight="Bold" Foreground="#2C3E50"/>
+                <TextBlock Text="Low Stock Report" FontSize="28" FontWeight="Bold" Foreground="#2C3E50"/>
                 <Button Content="Refresh" Command="{Binding RefreshCommand}" 
                         HorizontalAlignment="Right" Width="80" Height="30"/>
             </Grid>
 
-            <!-- Summary cards -->
             <WrapPanel Margin="0,0,0,20">
                 <Border Background="White" CornerRadius="10" Width="200" Height="100" Margin="0,0,15,15"
                         Effect="{DynamicResource CardShadow}">
@@ -41,7 +40,7 @@
 
             <!-- Low stock list -->
             <TextBlock Text="Low Stock Items" FontSize="20" FontWeight="SemiBold" Margin="0,0,0,10"/>
-            <Border Background="White" CornerRadius="10" Padding="15" Effect="{DynamicResource CardShadow}" Height="286">
+            <Border Background="White" CornerRadius="10" Padding="15" Effect="{DynamicResource CardShadow}">
                 <ItemsControl ItemsSource="{Binding Report.LowStockItems}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
