@@ -35,6 +35,9 @@
         <DataTemplate DataType="{x:Type vm:StockBalanceReportViewModel}">
             <views:StockBalanceReportView />
         </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:CustomerVehicleJobReportViewModel}">
+            <views:CustomerVehicleJobReportView />
+        </DataTemplate>
     </Window.Resources>
 
     <!-- ============================================= -->
@@ -59,6 +62,7 @@
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" 
                             HorizontalAlignment="Right" VerticalAlignment="Center">
+
                     <TextBlock Text="{Binding FullName}"  
                                Foreground="LightGray" VerticalAlignment="Center"
                                Margin="0,0,20,0"/>
@@ -106,6 +110,9 @@
                                 Visibility="{Binding CanAccessReports, Converter={StaticResource BoolToVis}}"/>   
 
                     <StackPanel Visibility="{Binding IsReportsExpanded, Converter={StaticResource BoolToVis}}">
+                        <Button Content="    🧾 Vehicles Status by Owner" Style="{StaticResource NavButton}"
+                                Command="{Binding NavigateCommand}" CommandParameter="CustomerVehicleJobReport"
+                                Padding="35,0,0,0" FontSize="14"/>
                         <Button Content="    📦 Low Stock Report" Style="{StaticResource NavButton}"
                                 Command="{Binding NavigateCommand}" CommandParameter="StockReport"
                                 Padding="35,0,0,0" FontSize="14"/>

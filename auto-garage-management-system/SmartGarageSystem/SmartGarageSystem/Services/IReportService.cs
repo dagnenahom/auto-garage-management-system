@@ -12,5 +12,6 @@ namespace SmartGarageSystem.Services
     {
         Task<StockReport> GetStockReportAsync();
         Task<StockBalanceReport> GetStockBalanceReportAsync();
+        Task<CustomerVehicleJobReport> GetCustomerVehicleJobReportAsync();
     }
 }

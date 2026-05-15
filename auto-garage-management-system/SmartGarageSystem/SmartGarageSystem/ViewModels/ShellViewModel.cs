@@ -87,6 +87,9 @@ namespace SmartGarageSystem.ViewModels
                         case "StockBalanceReport":
                             _navigation.NavigateTo<StockBalanceReportViewModel>();
                             break;
+                        case "CustomerVehicleJobReport":
+                            _navigation.NavigateTo<CustomerVehicleJobReportViewModel>();
+                            break;
                         default:
                             break;
 

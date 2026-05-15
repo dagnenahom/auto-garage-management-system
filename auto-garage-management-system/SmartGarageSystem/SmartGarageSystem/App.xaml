@@ -4,13 +4,17 @@
              xmlns:local="clr-namespace:SmartGarageSystem"
              xmlns:vm="clr-namespace:SmartGarageSystem.ViewModels"
              xmlns:views="clr-namespace:SmartGarageSystem.Views"
+             xmlns:converters="clr-namespace:SmartGarageSystem.Converters"
              StartupUri="Views/LoginWindow.xaml">
     <Application.Resources>
         <!--<BitmapImage x:Key="GarageLogo" UriSource="pack://application:,,,/Resources/Garage_Logo.png"/>-->
+     
 
         <DropShadowEffect x:Key="CardShadow" BlurRadius="10" ShadowDepth="2" Opacity="0.15"/>
         <!-- Built‑in converter: true → Visible, false → Collapsed -->
         <BooleanToVisibilityConverter x:Key="BoolToVis" />
+        <converters:StatusColorConverter x:Key="StatusColorConverter" 
+                             xmlns:converters="clr-namespace:SmartGarageSystem.Converters" />
         <Style x:Key="ToggleNavButton" TargetType="ToggleButton">
             <Setter Property="Background" Value="Transparent" />
             <Setter Property="Foreground" Value="White" />
