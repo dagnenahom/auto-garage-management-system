@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CBF52612-4EAD-47E8-A486-288688260FCE}|SmartGarageTest\\SmartGarageTest.csproj|c:\\users\\admin\\documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\smartgaragesystem\\smartgaragetest\\tests\\customerserviceintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBF52612-4EAD-47E8-A486-288688260FCE}|SmartGarageTest\\SmartGarageTest.csproj|solutionrelative:smartgaragetest\\tests\\customerserviceintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CBF52612-4EAD-47E8-A486-288688260FCE}|SmartGarageTest\\SmartGarageTest.csproj|c:\\users\\admin\\documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\smartgaragesystem\\smartgaragetest\\tests\\inventoryserviceintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBF52612-4EAD-47E8-A486-288688260FCE}|SmartGarageTest\\SmartGarageTest.csproj|solutionrelative:smartgaragetest\\tests\\inventoryserviceintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CBF52612-4EAD-47E8-A486-288688260FCE}|SmartGarageTest\\SmartGarageTest.csproj|c:\\users\\admin\\documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\smartgaragesystem\\smartgaragetest\\tests\\databasefixture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBF52612-4EAD-47E8-A486-288688260FCE}|SmartGarageTest\\SmartGarageTest.csproj|solutionrelative:smartgaragetest\\tests\\databasefixture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBF52612-4EAD-47E8-A486-288688260FCE}|SmartGarageTest\\SmartGarageTest.csproj|c:\\users\\admin\\documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\smartgaragesystem\\smartgaragetest\\services\\authenticationservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBF52612-4EAD-47E8-A486-288688260FCE}|SmartGarageTest\\SmartGarageTest.csproj|solutionrelative:smartgaragetest\\services\\authenticationservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|c:\\users\\admin\\documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\smartgaragesystem\\smartgaragesystem\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|solutionrelative:smartgaragesystem\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|c:\\users\\admin\\documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\smartgaragesystem\\smartgaragesystem\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|solutionrelative:smartgaragesystem\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,25 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CustomerServiceIntegrationTests.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageTest\\Tests\\CustomerServiceIntegrationTests.cs",
-              "RelativeDocumentMoniker": "SmartGarageTest\\Tests\\CustomerServiceIntegrationTests.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageTest\\Tests\\CustomerServiceIntegrationTests.cs",
-              "RelativeToolTip": "SmartGarageTest\\Tests\\CustomerServiceIntegrationTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T10:23:08.761Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -57,47 +28,28 @@
               "RelativeDocumentMoniker": "SmartGarageTest\\Tests\\DatabaseFixture.cs",
               "ToolTip": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageTest\\Tests\\DatabaseFixture.cs",
               "RelativeToolTip": "SmartGarageTest\\Tests\\DatabaseFixture.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAqwCYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA1wB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T10:20:41.834Z",
+              "WhenOpened": "2026-05-16T13:23:43.655Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CustomerService.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\Services\\CustomerService.cs",
-              "RelativeDocumentMoniker": "SmartGarageSystem\\Services\\CustomerService.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\Services\\CustomerService.cs",
-              "RelativeToolTip": "SmartGarageSystem\\Services\\CustomerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "InventoryServiceIntegrationTests.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageTest\\Tests\\InventoryServiceIntegrationTests.cs",
+              "RelativeDocumentMoniker": "SmartGarageTest\\Tests\\InventoryServiceIntegrationTests.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageTest\\Tests\\InventoryServiceIntegrationTests.cs",
+              "RelativeToolTip": "SmartGarageTest\\Tests\\InventoryServiceIntegrationTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T10:19:19.807Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\Models\\Customer.cs",
-              "RelativeDocumentMoniker": "SmartGarageSystem\\Models\\Customer.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\Models\\Customer.cs",
-              "RelativeToolTip": "SmartGarageSystem\\Models\\Customer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T10:19:10.681Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AuthenticationServiceTests.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageTest\\Services\\AuthenticationServiceTests.cs",
-              "RelativeDocumentMoniker": "SmartGarageTest\\Services\\AuthenticationServiceTests.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageTest\\Services\\AuthenticationServiceTests.cs",
-              "RelativeToolTip": "SmartGarageTest\\Services\\AuthenticationServiceTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T10:18:35.363Z",
+              "WhenOpened": "2026-05-16T13:27:37.916Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             }
           ]
         }
