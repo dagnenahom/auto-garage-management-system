@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CBF52612-4EAD-47E8-A486-288688260FCE}|SmartGarageTest\\SmartGarageTest.csproj|c:\\users\\admin\\documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\smartgaragesystem\\smartgaragetest\\tests\\inventoryserviceintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBF52612-4EAD-47E8-A486-288688260FCE}|SmartGarageTest\\SmartGarageTest.csproj|solutionrelative:smartgaragetest\\tests\\inventoryserviceintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CBF52612-4EAD-47E8-A486-288688260FCE}|SmartGarageTest\\SmartGarageTest.csproj|c:\\users\\admin\\documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\smartgaragesystem\\smartgaragetest\\tests\\vehicleserviceintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBF52612-4EAD-47E8-A486-288688260FCE}|SmartGarageTest\\SmartGarageTest.csproj|solutionrelative:smartgaragetest\\tests\\vehicleserviceintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CBF52612-4EAD-47E8-A486-288688260FCE}|SmartGarageTest\\SmartGarageTest.csproj|c:\\users\\admin\\documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\smartgaragesystem\\smartgaragetest\\tests\\databasefixture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBF52612-4EAD-47E8-A486-288688260FCE}|SmartGarageTest\\SmartGarageTest.csproj|solutionrelative:smartgaragetest\\tests\\databasefixture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|c:\\users\\admin\\documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\smartgaragesystem\\smartgaragesystem\\views\\vehiclemanagementview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{60206AFB-B9FE-46F9-938A-519219B42197}|SmartGarageSystem\\SmartGarageSystem.csproj|solutionrelative:smartgaragesystem\\views\\vehiclemanagementview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBF52612-4EAD-47E8-A486-288688260FCE}|SmartGarageTest\\SmartGarageTest.csproj|c:\\users\\admin\\documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\smartgaragesystem\\smartgaragetest\\tests\\inventoryserviceintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBF52612-4EAD-47E8-A486-288688260FCE}|SmartGarageTest\\SmartGarageTest.csproj|solutionrelative:smartgaragetest\\tests\\inventoryserviceintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,7 +36,7 @@
               "RelativeDocumentMoniker": "SmartGarageTest\\Tests\\DatabaseFixture.cs",
               "ToolTip": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageTest\\Tests\\DatabaseFixture.cs",
               "RelativeToolTip": "SmartGarageTest\\Tests\\DatabaseFixture.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAA1wB0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-16T13:23:43.655Z",
               "IsPinned": true,
@@ -37,6 +45,35 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "VehicleServiceIntegrationTests.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageTest\\Tests\\VehicleServiceIntegrationTests.cs",
+              "RelativeDocumentMoniker": "SmartGarageTest\\Tests\\VehicleServiceIntegrationTests.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageTest\\Tests\\VehicleServiceIntegrationTests.cs",
+              "RelativeToolTip": "SmartGarageTest\\Tests\\VehicleServiceIntegrationTests.cs",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAmwMsAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T16:48:50.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VehicleManagementView.xaml",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\Views\\VehicleManagementView.xaml",
+              "RelativeDocumentMoniker": "SmartGarageSystem\\Views\\VehicleManagementView.xaml",
+              "ToolTip": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageSystem\\Views\\VehicleManagementView.xaml",
+              "RelativeToolTip": "SmartGarageSystem\\Views\\VehicleManagementView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-16T16:44:35.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "InventoryServiceIntegrationTests.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\repo\\auto-garage-management-system\\auto-garage-management-system\\SmartGarageSystem\\SmartGarageTest\\Tests\\InventoryServiceIntegrationTests.cs",
               "RelativeDocumentMoniker": "SmartGarageTest\\Tests\\InventoryServiceIntegrationTests.cs",
@@ -46,10 +83,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-16T13:27:37.916Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             }
           ]
         }

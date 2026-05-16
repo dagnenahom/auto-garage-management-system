@@ -27,7 +27,7 @@ namespace SmartGarageTest.Tests
             // Register the real services (same as in your App.xaml.cs)
             services.AddSingleton<ICustomerService, CustomerService>();
             services.AddSingleton<IInventoryService, InventoryService>();
-
+            services.AddSingleton<IVehicleService, VehicleService>();
             // If CustomerService needs other services (like IUserService), register them here too.
 
             ServiceProvider = services.BuildServiceProvider();
