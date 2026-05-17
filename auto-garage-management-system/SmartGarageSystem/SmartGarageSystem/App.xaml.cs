@@ -50,7 +50,7 @@ namespace SmartGarageSystem
             services.AddSingleton<IVehicleService, VehicleService>();
             services.AddSingleton<IInventoryService, InventoryService>();
             services.AddSingleton<IJobCardService, JobCardService>();
-
+            services.AddSingleton<IDashboardService, DashboardService>();
             services.AddSingleton<IAuthenticationService, AuthenticationService>();
             services.AddSingleton<INavigationService, Services.NavigationService>();
 

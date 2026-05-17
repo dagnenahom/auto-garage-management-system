@@ -1,12 +1,87 @@
-﻿<Window x:Class="SmartGarageSystem.Views.DashboardView"
+﻿<UserControl x:Class="SmartGarageSystem.Views.DashboardView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCore.SkiaSharpView.WPF"       
         xmlns:local="clr-namespace:SmartGarageSystem.Views"
         mc:Ignorable="d"
-        Title="DashboardView" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
-</Window>
+        d:DesignHeight="700" d:DesignWidth="1000">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="20">
+            <!-- Header -->
+            <Grid Margin="0,0,0,15">
+                <TextBlock Text="Dashboard" FontSize="28" FontWeight="Bold" Foreground="#2C3E50"/>
+                <Button Content="Refresh" Command="{Binding RefreshCommand}" 
+                        HorizontalAlignment="Right" Width="80" Height="30"/>
+            </Grid>
+
+            <!-- Summary Cards -->
+            <WrapPanel Margin="0,0,0,20">
+                <Border Background="White" CornerRadius="10" Width="180" Height="100" Margin="0,0,15,15"
+                        Effect="{DynamicResource CardShadow}">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="{Binding TotalVehicles}" FontSize="36" FontWeight="Bold" Foreground="#2980B9" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Vehicles" FontSize="14" Foreground="#7F8C8D" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+                <Border Background="White" CornerRadius="10" Width="180" Height="100" Margin="0,0,15,15"
+                        Effect="{DynamicResource CardShadow}">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="{Binding TotalCustomers}" FontSize="36" FontWeight="Bold" Foreground="#27AE60" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Customers" FontSize="14" Foreground="#7F8C8D" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+                <Border Background="White" CornerRadius="10" Width="180" Height="100" Margin="0,0,15,15"
+                        Effect="{DynamicResource CardShadow}">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="{Binding OpenJobCards}" FontSize="36" FontWeight="Bold" Foreground="#E67E22" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Open Jobs" FontSize="14" Foreground="#7F8C8D" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+                <Border Background="White" CornerRadius="10" Width="180" Height="100" Margin="0,0,15,15"
+                        Effect="{DynamicResource CardShadow}">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="{Binding LowStockItems}" FontSize="36" FontWeight="Bold" Foreground="#E74C3C" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Low Stock" FontSize="14" Foreground="#7F8C8D" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </WrapPanel>
+
+            <!-- Charts Row -->
+            <Grid Margin="0,0,0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Bar Chart: Vehicles by Make -->
+                <GroupBox Grid.Column="0" Header="Vehicles by Make" Margin="0,0,10,0">
+                    <lvc:CartesianChart Series="{Binding VehiclesByMakeSeries}"
+                                        XAxes="{Binding VehicleMakeLabels}"
+                                        Height="200"/>
+                </GroupBox>
+
+                <!-- Pie Chart: Job Cards by Status -->
+                <GroupBox Grid.Column="1" Header="Job Cards by Status" Margin="10,0,0,0">
+                    <lvc:PieChart Series="{Binding JobCardsByStatusSeries}"
+                                  Height="200"/>
+                </GroupBox>
+            </Grid>
+
+            <!-- Recent Activities (from previous design) -->
+            <TextBlock Text="Recent Activities" FontSize="18" FontWeight="SemiBold" Foreground="#2C3E50" Margin="0,0,0,10"/>
+            <Border Background="White" CornerRadius="10" Padding="15" Effect="{DynamicResource CardShadow}">
+                <ItemsControl ItemsSource="{Binding RecentActivities}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Padding="5,3" BorderBrush="#ECF0F1" BorderThickness="0,0,0,1">
+                                <TextBlock Text="{Binding}" FontSize="14" Foreground="#2C3E50"/>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>
