@@ -28,6 +28,14 @@ namespace SmartGarageTest.Tests
             services.AddSingleton<ICustomerService, CustomerService>();
             services.AddSingleton<IInventoryService, InventoryService>();
             services.AddSingleton<IVehicleService, VehicleService>();
+            services.AddSingleton<IJobCardService, JobCardService>();
+            // Password hasher
+            services.AddSingleton<IPasswordHasher, PasswordHasher>();
+            // Repository
+            services.AddSingleton<IUserRepository, SqlUserRepository>();
+            // User service
+            services.AddSingleton<IUserService, UserService>();
+            // IUserSession is not needed for these tests.
             // If CustomerService needs other services (like IUserService), register them here too.
 
             ServiceProvider = services.BuildServiceProvider();

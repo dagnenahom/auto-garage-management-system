@@ -134,17 +134,27 @@ namespace SmartGarageSystem.Services
             cmdDelCard.Parameters.AddWithValue("@Id", id);
             await cmdDelCard.ExecuteNonQueryAsync();
         }
-
         public async Task AddItemToJobCardAsync(int jobCardId, JobCardItem item)
         {
+
             using var con = new SqlConnection(_conn);
             await con.OpenAsync();
             using var tx = con.BeginTransaction();
             try
             {
-                // Insert item
+                // ----- Validate stock before deducting -----
+                string stockSql = "SELECT QuantityInStock FROM InventoryItems WHERE InventoryItemId = @InvId";
+                using var stockCmd = new SqlCommand(stockSql, con, tx);
+                stockCmd.Parameters.AddWithValue("@InvId", item.InventoryItemId);
+                var currentStockObj = await stockCmd.ExecuteScalarAsync();
+                int currentStock = currentStockObj != null ? (int)currentStockObj : 0;
+
+                if (currentStock < item.Quantity)
+                    throw new InvalidOperationException($"Insufficient stock. Requested {item.Quantity}, available {currentStock}.");
+
+                // Insert the job card item
                 string sql = @"INSERT INTO JobCardItems (JobCardId, InventoryItemId, Quantity, UnitPrice)
-                            VALUES (@JobCardId, @InvId, @Qty, @Price)";
+                       VALUES (@JobCardId, @InvId, @Qty, @Price)";
                 using var cmd = new SqlCommand(sql, con, tx);
                 cmd.Parameters.AddWithValue("@JobCardId", jobCardId);
                 cmd.Parameters.AddWithValue("@InvId", item.InventoryItemId);

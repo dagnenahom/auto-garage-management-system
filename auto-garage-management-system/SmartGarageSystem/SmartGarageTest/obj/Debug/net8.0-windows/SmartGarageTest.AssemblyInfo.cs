@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartGarageTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f723ecb8aeb8e514c6d200b4170adecf7c483109")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad8b4b4ee53c891848ca7313fcee3fd4ae43a4c3")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartGarageTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartGarageTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
