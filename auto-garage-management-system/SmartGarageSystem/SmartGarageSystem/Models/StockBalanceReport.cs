@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartGarageSystem.ViewModels
+namespace SmartGarageSystem.Models
 {
     public class StockBalanceReport
     {

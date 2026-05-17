@@ -1,4 +1,5 @@
-﻿using SmartGarageSystem.Services;
+﻿using SmartGarageSystem.Models;
+using SmartGarageSystem.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;

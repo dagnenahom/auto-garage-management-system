@@ -35,8 +35,8 @@ namespace SmartGarageTest.Tests
             services.AddSingleton<IUserRepository, SqlUserRepository>();
             // User service
             services.AddSingleton<IUserService, UserService>();
-            // IUserSession is not needed for these tests.
-            // If CustomerService needs other services (like IUserService), register them here too.
+            //Reports
+            services.AddSingleton<IReportService, ReportService>();
 
             ServiceProvider = services.BuildServiceProvider();
         }
