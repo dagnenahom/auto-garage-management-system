@@ -87,9 +87,12 @@
                     <Button Content="  Dashboard" Style="{StaticResource NavButton}" 
                             Command="{Binding NavigateCommand}" CommandParameter="Dashboard"
                             Visibility="{Binding CanAccessUsers, Converter={StaticResource BoolToVis}}"/>
+                    
                     <Button Content="  Customers" Style="{StaticResource NavButton}"
                             Command="{Binding NavigateCommand}" CommandParameter="Customers"
                             Visibility="{Binding CanAccessCustomers, Converter={StaticResource BoolToVis}}"/>
+                    
+                    
                     <Button Content="  Vehicles" Style="{StaticResource NavButton}"
                             Command="{Binding NavigateCommand}" CommandParameter="Vehicles"
                             Visibility="{Binding CanAccessVehicles, Converter={StaticResource BoolToVis}}"/>

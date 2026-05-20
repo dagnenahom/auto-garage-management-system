@@ -16,5 +16,5 @@ C:\Users\admin\Documents\repo\auto-garage-management-system\auto-garage-manageme
 230-9433973
 MainWindow.xaml;Views\CustomerManagementView.xaml;Views\CustomerVehicleJobReportView.xaml;Views\DashboardView.xaml;Views\InventoryView.xaml;Views\JobCardView.xaml;Views\LoginWindow.xaml;Views\ShellWindow.xaml;Views\StockBalanceReportView.xaml;Views\StockReportView.xaml;Views\UserManagementView.xaml;Views\VehicleManagementView.xaml;
 
-True
+False
 
